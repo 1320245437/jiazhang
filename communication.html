@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>沟通支持 - 心灵港湾-家长守护</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+  <style>
+    .comm-container {
+      padding: 16px;
+      padding-bottom: 100px;
+    }
+    
+    .page-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    
+    .chat-container {
+      margin-bottom: 80px;
+    }
+    
+    .message {
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .message-sent {
+      align-items: flex-end;
+    }
+    
+    .message-received {
+      align-items: flex-start;
+    }
+    
+    .message-content {
+      max-width: 80%;
+      padding: 12px 16px;
+      border-radius: 16px;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    
+    .message-sent .message-content {
+      background-color: var(--primary-color);
+      color: white;
+      border-bottom-right-radius: 4px;
+    }
+    
+    .message-received .message-content {
+      background-color: var(--light-gray);
+      border-bottom-left-radius: 4px;
+    }
+    
+    .message-time {
+      font-size: 12px;
+      color: #999;
+    }
+    
+    .chat-input-container {
+      position: fixed;
+      bottom: 83px;
+      left: 0;
+      right: 0;
+      max-width: 414px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      background-color: white;
+      border-top: 1px solid var(--medium-gray);
+      display: flex;
+      align-items: center;
+    }
+    
+    .chat-input {
+      flex: 1;
+      border: 1px solid var(--medium-gray);
+      border-radius: 20px;
+      padding: 10px 16px;
+      font-size: 15px;
+      margin-right: 10px;
+    }
+    
+    .send-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+    }
+    
+    .suggestions-container {
+      margin-top: 24px;
+    }
+    
+    .suggestions-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    
+    .suggestion-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .suggestion-chip {
+      background-color: var(--light-gray);
+      padding: 8px 16px;
+      border-radius: 16px;
+      font-size: 14px;
+      color: var(--text-color);
+      border: none;
+    }
+    
+    .support-card {
+      background-color: white;
+      border-radius: var(--border-radius);
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+    }
+    
+    .support-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 24px;
+      background-color: rgba(110, 158, 235, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 16px;
+      color: var(--secondary-color);
+      font-size: 24px;
+    }
+    
+    .support-details {
+      flex: 1;
+    }
+    
+    .support-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    
+    .support-desc {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+    
+    .support-action {
+      font-size: 14px;
+      color: var(--secondary-color);
+      font-weight: 500;
+    }
+    
+    .date-divider {
+      text-align: center;
+      color: #999;
+      font-size: 12px;
+      margin: 24px 0;
+      position: relative;
+    }
+    
+    .date-divider::before,
+    .date-divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 35%;
+      height: 1px;
+      background-color: var(--medium-gray);
+    }
+    
+    .date-divider::before {
+      left: 0;
+    }
+    
+    .date-divider::after {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="status-bar">
+      <div class="time">20:30</div>
+      <div class="icons">
+        <i class="ri-signal-wifi-line"></i>
+        <i class="ri-battery-charge-line"></i>
+      </div>
+    </div>
+    
+    <div class="comm-container">
+      <h1 class="page-title">与小明的沟通</h1>
+      
+      <div class="chat-container">
+        <div class="date-divider">2023年10月13日</div>
+        
+        <div class="message message-sent">
+          <div class="message-content">小明，最近学校的考试准备得怎么样了？</div>
+          <div class="message-time">13:45</div>
+        </div>
+        
+        <div class="message message-received">
+          <div class="message-content">还行吧，数学可能有点难。</div>
+          <div class="message-time">14:22</div>
+        </div>
+        
+        <div class="message message-sent">
+          <div class="message-content">需要我帮你找个辅导老师吗？或者我们一起复习一下？</div>
+          <div class="message-time">14:25</div>
+        </div>
+        
+        <div class="message message-received">
+          <div class="message-content">不用了，我自己能搞定。</div>
+          <div class="message-time">14:40</div>
+        </div>
+        
+        <div class="date-divider">今天</div>
+        
+        <div class="message message-sent">
+          <div class="message-content">今天晚上想吃什么？我可以做你喜欢的红烧排骨。</div>
+          <div class="message-time">17:30</div>
+        </div>
+        
+        <div class="message message-received">
+          <div class="message-content">可以啊，谢谢妈妈。</div>
+          <div class="message-time">17:45</div>
+        </div>
+      </div>
+      
+      <div class="chat-input-container">
+        <input type="text" class="chat-input" placeholder="输入消息...">
+        <button class="send-btn">
+          <i class="ri-send-plane-fill"></i>
+        </button>
+      </div>
+      
+      <div class="suggestions-container">
+        <div class="suggestions-title">沟通建议</div>
+        <div class="suggestion-chips">
+          <button class="suggestion-chip">最近有什么让你开心的事吗？</button>
+          <button class="suggestion-chip">我看到你最近很努力，真为你骄傲</button>
+          <button class="suggestion-chip">周末要不要一起去看电影？</button>
+          <button class="suggestion-chip">需要我帮忙解决什么问题吗？</button>
+        </div>
+        
+        <div class="support-card">
+          <div class="support-icon">
+            <i class="ri-user-heart-line"></i>
+          </div>
+          <div class="support-details">
+            <div class="support-title">专业心理顾问</div>
+            <div class="support-desc">不知如何沟通？获取专业建议和指导</div>
+            <div class="support-action">立即咨询 ></div>
+          </div>
+        </div>
+        
+        <div class="support-card">
+          <div class="support-icon">
+            <i class="ri-book-read-line"></i>
+          </div>
+          <div class="support-details">
+            <div class="support-title">家长沟通指南</div>
+            <div class="support-desc">了解青少年心理和有效沟通技巧</div>
+            <div class="support-action">查看更多 ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="nav-bar">
+      <div class="nav-item">
+        <div class="nav-icon"><i class="ri-home-5-line"></i></div>
+        <div class="nav-text">首页</div>
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon"><i class="ri-bar-chart-line"></i></div>
+        <div class="nav-text">分析</div>
+      </div>
+      <div class="nav-item active">
+        <div class="nav-icon"><i class="ri-message-3-line"></i></div>
+        <div class="nav-text">沟通</div>
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon"><i class="ri-settings-line"></i></div>
+        <div class="nav-text">设置</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 
